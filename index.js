@@ -22,6 +22,9 @@ const data = fs.readFile('./data.txt', 'utf-8', function(err, data) {
 });
 */
 
+/* 
+hello world node.version
+
 const http = require('http');
 
 // 서버의 주소
@@ -48,4 +51,25 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   // ` : 템플릿 문자열안의 변수는 ${} 사용가능
   console.log(`Server running at http://${hostname}:${port}/`);
+});
+*/
+
+const express = require('express');
+const app = express();
+
+// 미들웨어는 인터페이스가 정해져있음 req, res, next
+function logger(req, res, next) {
+  console.log('I am logger');
+  next(); 
+}
+function logger2(req, res, next) {
+  console.log('I am logger2');
+  next();
+}
+// add middleware
+app.use(logger);
+app.use(logger2);
+
+app.listen(3000, function() {
+  console.log('Server is running');
 });
