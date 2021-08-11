@@ -54,7 +54,9 @@ server.listen(port, hostname, () => {
 });
 */
 
-const express = require('express');
+
+const express = require('express');   // express middleware : npm i express
+const morgan = require('morgan');     // morgan middleware : npm i morgan
 const app = express();
 
 // 미들웨어는 인터페이스가 정해져있음 req, res, next
@@ -66,9 +68,10 @@ function logger2(req, res, next) {
   console.log('I am logger2');
   next();
 }
-// add middleware
+// add middleware : app.use() 를 통해 미들웨어를 추가
 app.use(logger);
 app.use(logger2);
+app.use(morgan('dev'));
 
 app.listen(3000, function() {
   console.log('Server is running');
