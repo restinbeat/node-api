@@ -7,7 +7,7 @@
 //   console.log('I am logger');
 //   next(); 
 // }
-// function logger2(req, res, next) {
+// function logger2(req, res, next) { 
 //   console.log('I am logger2');
 //   next();
 // }
