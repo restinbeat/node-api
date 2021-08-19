@@ -33,3 +33,8 @@ $ npm i supertest --save-dev
 ```bash
 $ node_modules/.bin/mocha <test fine name>
 ```
+
+**install body-parser**
+```bash
+$ npm i body-parser --save
+```
