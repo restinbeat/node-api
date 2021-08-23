@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cross-env": "^7.0.3",
     "express": "^4.17.1",
     "morgan": "^1.10.0"
   },
@@ -14,8 +15,8 @@
     "supertest": "^6.1.5"
   },
   "scripts": {
-    "test": "mocha lib/api/api.spec.js",
-    "start": "node index.js"
+    "test": "cross-env NODE_ENV=test mocha lib/api/user/user.spec.js",
+    "start": "node bin/www.js"
   },
   "repository": {
     "type": "git",
