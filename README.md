@@ -38,3 +38,20 @@ $ node_modules/.bin/mocha <test fine name>
 ```bash
 $ npm i body-parser --save
 ```
+
+**install corss-env (WINDOWS)**
+***1. install library***
+```bash
+$ npm i cross-env
+```
+
+***2. change test script***
+```bash
+- package.json > scripts > test
+cross-env NODE_ENV=test mocha lib/api/user/user.spec.js
+```
+
+***3. test***
+```bash
+$ npm t
+```
