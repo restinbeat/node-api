@@ -34,12 +34,16 @@ $ npm i supertest --save-dev
 $ node_modules/.bin/mocha <test fine name>
 ```
 
+### Install
+
 **install body-parser**
 ```bash
 $ npm i body-parser --save
 ```
 
 **install corss-env (WINDOWS)**
+<br>
+
 ***1. install library***
 ```bash
 $ npm i cross-env
@@ -54,4 +58,9 @@ cross-env NODE_ENV=test mocha lib/api/user/user.spec.js
 ***3. test***
 ```bash
 $ npm t
+```
+
+**install sequelize database**
+```bash
+$ npm i sequelize sqlite3 --save
 ```
