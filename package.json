@@ -17,7 +17,7 @@
     "supertest": "^6.1.5"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test mocha lib/api/user/user.spec.js",
+    "test": "cross-env NODE_ENV=test mocha lib/api/user/user.spec.js -w",
     "start": "node bin/www.js"
   },
   "repository": {
